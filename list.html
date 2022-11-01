@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>목록태그</title>
+    </head>
+    <body>
+        <ul>
+            <li>Front End</li>
+            <li>Back-End</li>
+            <li>DevOps & MLOps</li>
+        </ul>
+        <div id="content"></div>
+        
+    </body>
+
+    <!--스크립트는 순서가 중요하므로 content 라는 id를 가진 대상이 이미 만들어진 다음에 인식이 가능하다 즉 content보다 먼저 기술되면 인식X-->
+    <script> 
+        document.getElementById("content").innerHTML = "JavaScript"
+    </script>
+</html>

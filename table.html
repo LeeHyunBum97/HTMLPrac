@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>테이블 태그</title>
+    </head>
+
+    <body>
+    
+        <!--border의 경고는 디자인에 관해서는 CSS에 넘기라는 의미-->
+        <!--단순히 tr태그에서 스타일을 지정했을 때 해당 tr에 포함되는 행요소들에게 만 이벤트가 적용된다.-->
+        <table border="1">
+            <tr style="background:yellow">
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+
+            </tr>
+            <!--하지만 col태그 사용시 아래 테이블 요소에는 열을 기준으로 이벤트가 적용된다.-->
+            <col style="background-color: aqua;">
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+            <!-- 아래의 colgroup을 사용하면 밑의 테이블 요소에는 span에 입력된 수의 열만큼 이벤트가 적용된다-->
+            <colgroup span="2" style="background-color: red;"></colgroup>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+        </table>
+
+    </body>
+
+</html>
