@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            form태그 연습
+        </title>
+    </head>
+
+    <body>
+        <form action="serverurl" method="post">
+            <label>이름
+                <input type="text"/>
+            </label>
+            <!--input태그에서 value값을 사용자 정보가 담긴 것으로 설정하면 자동로그인 설정과 동일하다.-->
+            <label>비밀번호
+                <input type="password" value="itstudy"/>
+            </label>
+            <br/>
+
+            <!--fiedset으로 묶으면 실제 출력에서도 안의 요소들이 묶인다.-->
+            <fieldset>
+                <legend>성별</legend>
+                <!--name을 설정하면 하나의 그룹이되며 서버에서 읽을 때는 value값을 읽게 된다-->
+                <input type="radio" name="gender" value="man" checked="checked"/>남자
+                <input type="radio" name="gender" value="woman"/>여자
+            </fieldset>
+
+            <label>이미지
+                <!--file은 선택한  value를 읽을 수 있지만 설정은 안되다.-->
+                <input type="file" name="image" value="form.html"/>
+            </label>
+           
+            <!--button 우리가 기능을 정의해야 한다.-->
+            <input type="button" value="버튼"/>
+           
+            <!--submit은 서버에 접근 별다른  action없을시 전송할 API페이지로 이동하게 된다-->
+            <input type="submit" value="전송"/>
+           
+            <!--reset은 form의 데이터를 초기화 할 때 사용한다.-->
+            <input type="reset" value="취소"/>
+
+            <!--hidden은 눈에 보이지 않으나 서버에 데이터를 넘길수 있다,
+            서버 애플리케이션과 클라이언트 애플리케이션을 하나로 만들어서 템플릿 엔진을 이용해서 출력 한다면 매우 중요-->
+            <input type="hidden" value="숨김" name="data"/>
+            
+            <!--텍스트 에리어 초기값에 줄바꿈은 매우 안좋으며 태그를 여는 것과 닫는 것이 한줄에 있지 않을 경우 초기 커서가
+                맨앞이 아닌 이상한 곳에 있음
+                또한 초기값은 다른 태그처럼 value에 주는 것이 아니라 태그와 태그사이에 놓는 것을 주의하자-->
+            <textarea rows="5" cols="30">초기화</textarea>
+
+            <select name="수량">
+                <option value="1">1</option>
+                <option value="1">2</option>
+                <option value="1">3</option>
+                <option value="1">4</option>
+                <option value="1">5</option>
+            </select>
+        </form>
+    </body>
+
+</html>
